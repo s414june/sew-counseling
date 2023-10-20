@@ -136,7 +136,7 @@
 <script setup>
 import { ref } from "vue";
 
-const title = ref("SEW諮詢團隊");
+const title = ref("SEW顧問中心");
 
 const items = ref([
   {
