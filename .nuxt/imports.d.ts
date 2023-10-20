@@ -8,4 +8,5 @@ export { useSiteConfig } from '../node_modules/nuxt-site-config/dist/runtime/com
 export { updateSiteConfig } from '../node_modules/nuxt-site-config/dist/runtime/composables/updateSiteConfig';
 export { useNitroOrigin } from '../node_modules/nuxt-site-config/dist/runtime/composables/useNitroOrigin';
 export { createSitePathResolver, withSiteTrailingSlash, withSiteUrl } from '../node_modules/nuxt-site-config/dist/runtime/composables/utils';
+export { useNuxtDevTools } from '../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';
 export { definePageMeta } from '../node_modules/nuxt/dist/pages/runtime/composables';

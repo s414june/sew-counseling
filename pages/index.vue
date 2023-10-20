@@ -104,7 +104,7 @@
 </template>
 
 <script setup>
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics';
 import { ref } from "vue";
 
 const title = ref("SEW顧問中心");
