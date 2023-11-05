@@ -3,14 +3,15 @@
 
   <Head>
     <Title>{{ title }}</Title>
-    <meta name="description" content="我們致力於協助客戶處理與解決社會團體(social groups)、親職教育(education)、文書代繕(writing)等需要專業處理的各項事務與疑難雜症。">
+    <meta name="description"
+      content="我們致力於協助客戶處理與解決社會團體(social groups)、親職教育(education)、文書代繕(writing)等需要專業處理的各項事務與疑難雜症。服務項目包含：社團申請、長照立案、文書代筆、工商登記、簡報設計、親職教育">
   </Head>
   <nav>
 
-    <Menubar :model="items" class="justify-between">
+    <Menubar :model="items" class="justify-between bg-purple-50 shadow-lg">
       <template #start>
         <div class="flex items-center">
-          <img alt="logo" src="~/assets/images/logo.png" width="30" class="mr-2" />
+          <img alt="logo" src="~/assets/images/logo.jpg" width="50" class="mr-3 rounded-full shadow" />
           <h1 class="font-bold text-xl">{{ title }}</h1>
         </div>
       </template>
@@ -38,7 +39,7 @@
   <header class="flex lg:flex-row flex-col shadow-md">
     <div class="lg:w-1/2 w-full flex justify-center items-center bg-white py-10">
       <div class="text-center">
-        <h1 class="font-bold text-2xl text-sky-600">{{ title }}</h1>
+        <h1 class="font-bold text-2xl text-purple-700">{{ title }}</h1>
         <h2 class="text-2xl font-bold">您的生活好幫手</h2>
       </div>
     </div>
@@ -46,8 +47,8 @@
       <img alt="user header" src="~/assets/images/home.jpg" />
     </div>
   </header>
-  <article class="my-10" id="about">
-    <h2 class="text-center text-2xl font-bold text-sky-600 my-3">關於我們</h2>
+  <article class="my-10 bg-purple-100" id="about">
+    <h2 class="text-center text-2xl font-bold text-purple-700 my-3">關於我們</h2>
     <div class="text-center w-[600px] max-w-full m-auto">
       基於現代人腳步匆促，難以兼顧或專精生活上與事業上的各項事務。
       <br>
@@ -61,10 +62,10 @@
     </div>
   </article>
   <section class="my-10">
-    <h2 class="text-center text-2xl font-bold text-sky-600 my-3">服務項目</h2>
+    <h2 class="text-center text-2xl font-bold text-purple-700 my-3">服務項目</h2>
     <div class="flex justify-center flex-wrap">
       <template v-for="item in items[1].items">
-        <Card class="w-72 m-2">
+        <Card class="w-72 m-2 rounded-lg shadow-md">
           <template #title>{{ item.label }}</template>
           <!-- <template #subtitle> Card subtitle </template> -->
           <template #content>
@@ -94,8 +95,8 @@
     </div>
   </section>
   <!-- </div> -->
-  <footer class="bg-sky-900 w-full text-white flex justify-center p-4">
-    <p class="text-sm">Copyright © 2023 生活諮詢網 All rights reserved.</p>
+  <footer class="bg-purple-900 w-full text-white flex justify-center p-4">
+    <p class="text-sm">Copyright © 2023 {{ title }} All rights reserved.</p>
   </footer>
 </template>
 
@@ -211,39 +212,15 @@ const items = ref([
   },
 ]);
 
-const cards = ref([
-  {
-    title: "工商登記",
-  },
-  {
-    title: "勞資爭議",
-  },
-  {
-    title: "社會團體",
-  },
-  {
-    title: "簡報設計",
-  },
-  {
-    title: "代繕代擬",
-  },
-  {
-    title: "親子教育",
-  },
-  {
-    title: "親子教育",
-  },
-  {
-    title: "親子教育",
-  },
-  {
-    title: "親子教育",
-  },
-  {
-    title: "親子教育",
-  },
-  {
-    title: "親子教育",
-  },
-]);
 </script>
+<style scoped>
+::v-deep .p-button {
+  background-color: #A854F6;
+  border: none;
+}
+
+::v-deep .p-button:enabled:hover {
+  background-color: #8a39d6;
+  border: none;
+}
+</style>

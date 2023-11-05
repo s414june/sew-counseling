@@ -1247,7 +1247,7 @@ function normaliseDate(date) {
 const pages = [
   {
     "loc": "/",
-    "lastmod": "2023-10-20T02:24:08.605Z"
+    "lastmod": "2023-11-05T05:20:22.979Z"
   },
   {
     "loc": "/posts/a",
