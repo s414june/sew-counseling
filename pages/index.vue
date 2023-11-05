@@ -1,13 +1,6 @@
 <template>
   <!-- <div class="card relative z-2"> -->
-
-  <Head>
-    <Title>{{ title }}</Title>
-    <meta name="description"
-      content="我們致力於協助客戶處理與解決社會團體(social groups)、親職教育(education)、文書代繕(writing)等需要專業處理的各項事務與疑難雜症。服務項目包含：社團申請、長照立案、文書代筆、工商登記、簡報設計、親職教育">
-  </Head>
   <nav>
-
     <Menubar :model="items" class="justify-between bg-purple-50 shadow-lg">
       <template #start>
         <div class="flex items-center">
@@ -211,15 +204,25 @@ const items = ref([
     ],
   },
 ]);
-
+useHead({
+  title: title.value,
+  htmlAttrs: {
+    lang: 'zh-TW'
+  },
+  meta: [
+    { name: 'description', content: '我們致力於協助客戶處理與解決社會團體(social groups)、親職教育(education)、文書代繕(writing)等需要專業處理的各項事務與疑難雜症。服務項目包含：社團申請、長照立案、文書代筆、工商登記、簡報設計、親職教育。' }
+  ],
+  script: [],
+  link: []
+})
 </script>
 <style scoped>
-::v-deep .p-button {
+:deep .p-button {
   background-color: #A854F6;
   border: none;
 }
 
-::v-deep .p-button:enabled:hover {
+:deep .p-button:enabled:hover {
   background-color: #8a39d6;
   border: none;
 }
